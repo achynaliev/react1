@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Header = (props) => {
   const [value, setValue] = useState("");
@@ -8,10 +9,10 @@ const Header = (props) => {
     <nav className="navbar">
       <ul>
         <li>
-          <a href="default.asp">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="news.asp">News</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
           <a href="contact.asp">Contact</a>
